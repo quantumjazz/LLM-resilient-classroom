@@ -1,0 +1,244 @@
+.reveal .slides > section.slide {
+  height: 100%;
+}
+
+.reveal .slides section.slide {
+  overflow: hidden;
+}
+
+.reveal .slides section.scrollable-slide {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+.reveal .slides section.scrollable-slide > *:last-child {
+  margin-bottom: 0.6em;
+}
+
+.reveal img.plot-fit-calibration,
+.reveal img.plot-fit-reflexivity {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal img.plot-fit-calibration {
+  max-width: 84%;
+  max-height: 42vh;
+}
+
+.reveal img.plot-fit-reflexivity {
+  max-width: 74%;
+  max-height: 42vh;
+}
+
+.reveal .stats-slide table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.reveal .stats-slide th,
+.reveal .stats-slide td {
+  padding: 0.18em 0.24em;
+}
+
+.reveal .stats-slide {
+  font-size: 0.88em;
+}
+
+.reveal .stats-slide table {
+  overflow-wrap: normal;
+}
+
+.reveal .llm-source-links {
+  margin-top: 0.65em;
+  font-size: 0.68em;
+}
+
+.reveal .llm-source-links p {
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
+  margin: 0;
+}
+
+.reveal .llm-source-links a,
+.reveal .llm-open-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #b8c4d2;
+  border-radius: 6px;
+  padding: 0.28em 0.65em;
+  background: #ffffff;
+  color: #1f3a5f;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(31, 58, 95, 0.08);
+}
+
+.reveal .llm-links-slide .columns {
+  gap: min(2vw, 0.9em);
+}
+
+.reveal .llm-links-slide .column {
+  overflow: hidden;
+  width: calc(50% - 0.45em) !important;
+}
+
+.reveal .llm-link-card {
+  min-height: 190px;
+  border: 1px solid #c7d2df;
+  border-top: 4px solid #2d6f9f;
+  border-radius: 8px;
+  padding: 0.72em;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  box-shadow: 0 10px 24px rgba(31, 58, 95, 0.12);
+}
+
+.reveal .llm-link-card.teacher-link {
+  border-top-color: #8a6a2f;
+}
+
+.reveal .llm-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0 0 0.9em;
+  color: #26384d;
+  font-size: 28px !important;
+  font-weight: 600;
+  line-height: 1.12;
+  text-transform: none;
+}
+
+.reveal .llm-card-title p {
+  margin: 0;
+}
+
+.reveal .llm-card-title::before {
+  content: "";
+  width: 0.55em;
+  min-width: 0.55em;
+  height: 0.55em;
+  border-radius: 999px;
+  background: #2d6f9f;
+  box-shadow: 0 0 0 3px rgba(45, 111, 159, 0.14);
+}
+
+.reveal .llm-link-card.teacher-link .llm-card-title::before {
+  background: #8a6a2f;
+  box-shadow: 0 0 0 3px rgba(138, 106, 47, 0.16);
+}
+
+.reveal .llm-url {
+  display: block;
+  overflow-wrap: anywhere;
+  border-left: 3px solid #d6dee9;
+  padding-left: 0.65em;
+  color: #28486d;
+  font-size: 15px;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.reveal .llm-links-slide .llm-open-link {
+  margin-top: 22px;
+  font-size: 15px;
+}
+
+.reveal .app-frame {
+  display: block;
+  width: 100%;
+  height: min(58vh, 520px);
+  border: 0;
+}
+
+.reveal .join-link {
+  font-size: 1.25em;
+  text-align: center;
+  margin-top: 1.2em;
+  overflow-wrap: anywhere;
+}
+
+.reveal .iframe-note {
+  font-size: 0.7em;
+  color: #666;
+  margin-top: 1.5em;
+}
+
+.reveal .course-memory-table {
+  font-size: 0.78em;
+}
+
+.reveal .course-memory-table table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.reveal .course-memory-table th,
+.reveal .course-memory-table td {
+  padding: 0.22em 0.35em;
+  vertical-align: top;
+}
+
+.reveal svg.mermaid-js {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.reveal svg.mermaid-js .nodeLabel,
+.reveal svg.mermaid-js .edgeLabel,
+.reveal svg.mermaid-js .label,
+.reveal svg.mermaid-js text,
+.reveal svg.mermaid-js foreignObject span,
+.reveal svg.mermaid-js foreignObject div {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 650 !important;
+  line-height: 1.18 !important;
+}
+
+.reveal svg.mermaid-js .node rect,
+.reveal svg.mermaid-js .node circle,
+.reveal svg.mermaid-js .node ellipse,
+.reveal svg.mermaid-js .node polygon,
+.reveal svg.mermaid-js .node path {
+  stroke-width: 2px !important;
+}
+
+.reveal svg.mermaid-js .edgePath .path,
+.reveal svg.mermaid-js .flowchart-link {
+  stroke-width: 2px !important;
+}
+
+.reveal .exercise-file-link {
+  margin-top: 0.75em;
+  font-size: 0.72em;
+}
+
+.reveal .exercise-file-link a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #b8c4d2;
+  border-radius: 6px;
+  padding: 0.32em 0.7em;
+  background: #ffffff;
+  color: #1f3a5f;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(31, 58, 95, 0.08);
+}
+
+.reveal section[data-background-color="#1a1a2e"] h1,
+.reveal section[data-background-color="#1a1a2e"] h2,
+.reveal section[data-background-color="#1a1a2e"] p,
+.reveal section[data-background-color="#1a1a2e"] li,
+.reveal section[data-background-color="#1f3a5f"] h1,
+.reveal section[data-background-color="#1f3a5f"] h2,
+.reveal section[data-background-color="#1f3a5f"] p,
+.reveal section[data-background-color="#1f3a5f"] li {
+  color: white;
+}

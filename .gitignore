@@ -1,0 +1,24 @@
+.DS_Store
+.Rhistory
+
+# Drafts and intermediate decks not needed for the published presentation.
+llm_resilient_course.qmd
+llm_resilient_course_parts_0_to_3.html
+llm_resilient_course_parts_0_to_3.qmd
+llm_resilient_course_parts_0_to_3_files/
+llm_resilient_course_parts_0_to_3_bg copy*
+llm_resilient_course_parts_0_to_3_bg copy_files/
+llm_resilient_course_parts_0_to_3_bg copy 2_files/
+part0_beauty_contest.qmd
+pillar1_apps.*
+pillar2_assessment.*
+pillar3_content.*
+pillar1_live_system_bg.*
+pillar1_apps_files/
+pillar2_assessment_files/
+pillar3_content_files/
+pillar1_live_system_bg_files/
+
+# Duplicate figure copies; final deck uses figures/ for these two.
+figs/fig1_histograms_bg.png
+figs/fig7_self_defeating_bg.png

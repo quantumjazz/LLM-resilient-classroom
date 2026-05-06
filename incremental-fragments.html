@@ -1,0 +1,85 @@
+<script>
+(function () {
+  function hasFragmentAncestor(element, slide) {
+    for (var node = element.parentElement; node && node !== slide; node = node.parentElement) {
+      if (node.classList.contains("fragment")) return true;
+    }
+    return false;
+  }
+
+  function addFragment(element, slide) {
+    if (!element || element.classList.contains("fragment") || hasFragmentAncestor(element, slide)) return;
+    element.classList.add("fragment");
+  }
+
+  function isStructuralOnly(element) {
+    return element.matches("h1, h2, h3, h4, h5, h6, script, style");
+  }
+
+  function isVisualBlock(element) {
+    return element.matches(
+      ".callout, .llm-link-card, .exercise-file-link, .join-link, .iframe-note, " +
+      "table, blockquote, iframe, pre, .cell, .cell-output-display"
+    );
+  }
+
+  function processContainer(container, slide) {
+    Array.prototype.forEach.call(container.children, function (child) {
+      if (isStructuralOnly(child) || child.classList.contains("fragment") || hasFragmentAncestor(child, slide)) return;
+
+      if (child.matches("ul, ol")) {
+        Array.prototype.forEach.call(child.children, function (item) {
+          if (item.matches("li")) addFragment(item, slide);
+        });
+        return;
+      }
+
+      if (child.matches(".columns")) {
+        Array.prototype.forEach.call(child.querySelectorAll(":scope > .column"), function (column) {
+          processContainer(column, slide);
+        });
+        return;
+      }
+
+      if (child.matches(".column")) {
+        processContainer(child, slide);
+        return;
+      }
+
+      if (isVisualBlock(child)) {
+        addFragment(child, slide);
+        return;
+      }
+
+      if (child.matches("div") && child.children.length > 0) {
+        processContainer(child, slide);
+        return;
+      }
+
+      addFragment(child, slide);
+    });
+  }
+
+  function applyIncrementalFragments() {
+    document.querySelectorAll(".reveal .slides section.slide").forEach(function (slide) {
+      if (slide.classList.contains("title-slide")) return;
+      processContainer(slide, slide);
+      Array.prototype.forEach.call(slide.querySelectorAll(".fragment"), function (fragment, index) {
+        fragment.setAttribute("data-fragment-index", index);
+      });
+    });
+
+    if (window.Reveal && typeof window.Reveal.sync === "function") {
+      window.Reveal.sync();
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyIncrementalFragments);
+  } else {
+    applyIncrementalFragments();
+  }
+
+  window.addEventListener("load", applyIncrementalFragments);
+})();
+</script>

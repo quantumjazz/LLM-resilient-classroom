@@ -1,0 +1,71 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Source Serif Pro", Georgia, "Times New Roman", serif !default;
+
+$presentation-heading-font: $font-family-sans-serif !default;
+$presentation-heading-color: #1a1a2e !default;
+$presentation-heading-font-weight: 600 !default;
+
+$body-color: #2a2a35 !default;
+$link-color: #2a6f97 !default;
+$selection-bg: #d6e4f0 !default;
+
+/*-- scss:rules --*/
+
+.reveal .slide-number {
+  font-size: 0.6em;
+  color: #888;
+}
+
+.reveal h1.title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.reveal section h2 {
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e8;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+.reveal blockquote {
+  border-left: 4px solid #2a6f97;
+  padding-left: 1em;
+  font-style: italic;
+  color: #444;
+}
+
+.reveal table {
+  font-size: 0.85em;
+}
+
+.reveal table thead {
+  background-color: #1a1a2e;
+  color: white;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: #f7f7fa;
+}
+
+.reveal .callout {
+  border-radius: 6px;
+}
+
+.reveal .columns {
+  align-items: start;
+}
+
+/* Section divider slides */
+.reveal section[data-background-color="#1a1a2e"] h1,
+.reveal section[data-background-color="#1a1a2e"] h2,
+.reveal section[data-background-color="#1a1a2e"] p {
+  color: white;
+}
+
+.reveal .footnote {
+  font-size: 0.5em;
+  color: #888;
+}
