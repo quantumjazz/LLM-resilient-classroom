@@ -480,10 +480,10 @@ flowchart TB
 
 ## Демонстрация на живо
 
-[AI Teaching Assistant](http://127.0.0.1:5000){target="_blank"}
+[AI Teaching Assistant](https://society-economics-business.visiometrica.com){target="_blank"}
 
-- Статус: [`/setup`](http://127.0.0.1:5000/setup)
-- Индексирани документи: [`/documents`](http://127.0.0.1:5000/documents)
+- Статус: [`/setup`](https://society-economics-business.visiometrica.com/setup)
+- Индексирани документи: [`/documents`](https://society-economics-business.visiometrica.com/documents)
 
 
 ## Обобщение {background-color="#1a1a2e"}
